@@ -1,0 +1,60 @@
+<note> INSTRUCTION UNITS ARE  ['ADD', '$R1', '$R2', '$R3']
+<note> FOUND R TYPE INSTRUCTION
+<note> BINARY INSTRUCTION 00000000010000110000100000100000
+
+<control line> SET REGWRITE TO 1
+<control line> SET REGDst TO 1
+<data change> SET READ REGISTER 1 TO 00010
+<data change> SET READ REGISTER 2 TO 00011
+<data change> CALLING MUX FOR WRITE REGISTER...SET WRITE REGISTER TO 00001
+<data change> SET READ DATA 1 TO 5
+<data change> SET READ DATA 2 TO 5
+
+<data change> INPUT ONE IS 5
+<processing> EXTENDING SIGN ON VALUE 0000100000100000
+
+<data change>INPUT TWO IS 5
+
+<processing> EXECUTING 5+5
+<data change> ALU ZERO SET TO 0
+
+<data change> SET DATA MEM ADDRESS TO 10
+<data change> SET WRITE DATA TO 5
+<control line> SET DATA MEM READ TO False
+<control line> SET DATA MEM WRITE TO False
+<data change> CALLING MUX TO DETERMINE WRITE DATA SOURCE... REGISTER WRITE DATA IS 10
+
+<writing notice> WROTE VALUE 10 TO REGISTER NUMBER 00001
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+<note> INSTRUCTION UNITS ARE  ['ADDI', '$R1', '$R2', '10']
+<note> FOUND I TYPE INSTRUCTION
+<note> BINARY INSTRUCTION 00100000010000010000000000001010
+
+<control line> SET REGWRITE TO 1
+<control line> SET REGDst TO 0
+<data change> SET READ REGISTER 1 TO 00010
+<data change> SET READ REGISTER 2 TO 00001
+<data change> CALLING MUX FOR WRITE REGISTER...SET WRITE REGISTER TO 00001
+<data change> SET READ DATA 1 TO 5
+<data change> SET READ DATA 2 TO 0
+
+<data change> INPUT ONE IS 5
+<processing> EXTENDING SIGN ON VALUE 0000000000001010
+
+<data change>INPUT TWO IS 10
+
+<processing> EXECUTING 5+10
+<data change> ALU ZERO SET TO 0
+
+<data change> SET DATA MEM ADDRESS TO 15
+<data change> SET WRITE DATA TO 0
+<control line> SET DATA MEM READ TO False
+<control line> SET DATA MEM WRITE TO False
+<data change> CALLING MUX TO DETERMINE WRITE DATA SOURCE... REGISTER WRITE DATA IS 15
+
+<writing notice> WROTE VALUE 15 TO REGISTER NUMBER 00001
+
